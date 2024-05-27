@@ -1,0 +1,224 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Kumbah Sans', sans-serif;
+}
+
+.navbar {
+    background: #FF69B4;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+.navbar__container {
+    display: flex;
+    justify-content:  space-between;
+    height: 80px;
+    z-index: 1;
+    width: 100;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 50px;
+}
+#navbar__logo {
+    background-color: #DAA520;
+    background-image: linear-gradient(to top, #C71585 50%, #ffffff 0%);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 2rem;
+}
+
+
+.fa-gem {
+    margin-right: 0.5rem;
+}
+
+.navbar__menu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    text-align: center;
+}
+
+
+
+.navbar__item {
+    height: 80px;
+}
+
+.navbar__links {
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    padding: 0 1rem;
+    height: 100%;
+}
+
+
+.navbar__btn {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   padding: 0 1rem;
+   width: 100%;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    padding: 10px 20px;
+    height: 100%;
+    width: 100%;
+    border: none;
+    border-radius: 4px;
+    background: #C71585;
+    color: #fff;
+}
+
+.button:hover {
+    background: #49002d;
+    transition: all 0.3s ease;
+}
+
+.navbar__links:hover {
+    background: #C71585;
+    transition: all 0.3s ease;
+}
+
+@media screen and (max-width: 960px) {
+    .navbar__container {
+        display: flex;
+        justify-content: space-between;
+        height: 80px;
+        z-index: 1;
+        width: 100%;
+        max-width: 1300px;
+        padding: 0;
+    }
+
+    .navbar__menu {
+        display: grid;
+        grid-template-columns: auto;
+        margin: 0;
+        width: 100%;
+        position: absolute;
+        top: -1000px;
+        opacity: 0;
+        transition: all 0.5s ease;
+        height: 50vh;
+        z-index: -1;
+    }
+
+    .navbar__menu.active {
+        background: #131313;
+        top: 100%;
+        opacity: 1;
+        transition: all 0.5s ease;
+        z-index: 99;
+        height: 50vh;
+        font-size: 1.6rem;
+
+    }
+}
+/* This rule styles the recommended section. */
+.recommended-section {
+    padding: 20px; /* Adds space around the content inside the recommended section. */
+    background: #fff; /* Sets the background color of the recommended section. */
+}
+
+/* This rule styles the scrollable container inside the recommended section. */
+.scrollable-container {
+    display: flex; /* Makes the service cards display in a row. */
+    overflow-x: auto; /* Makes the container scrollable horizontally. */
+    gap: 20px; /* Adds space between the service cards. */
+}
+
+/* This rule styles each service card. */
+.service-card {
+    width: 200px; /* Sets a fixed width for the service cards. */
+    padding: 20px; /* Adds space around the content inside each service card. */
+    background: #f9f9f9; /* Sets the background color of the service cards. */
+    border-radius: 10px; /* Rounds the corners of the service cards. */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow to the service cards. */
+}
+
+/* This rule styles the images inside each service card. */
+.service-card img {
+    width: 100%; /* Makes the images take up the full width of the service cards. */
+    height: auto; /* Keeps the original aspect ratio of the images. */
+}
+
+/* This rule styles the service provider names inside each service card. */
+.service-card h3 {
+    margin-top: 10px; /* Adds space above the service provider names. */
+    font-size: 1.2rem; /* Sets the font size of the service provider names. */
+}
+
+/* This rule styles the service details inside each service card. */
+.service-card p {
+    margin-top: 5px; /* Adds space above the service details. */
+    font-size: 1rem; /* Sets the font size of the service details. */
+    color: #666; /* Sets the color of the service details. */
+}
+
+/* This rule styles the ratings inside each service card. */
+.service-card .rating {
+    margin-top: 10px; /* Adds space above the ratings. */
+    font-size: 1.2rem; /* Sets the font size of the ratings. */
+    color: #FFD700; /* Sets the color of the ratings. */
+}
+
+
+/* This rule styles the contact section. */
+.contact-section {
+    background: #FF69B4; /* Sets the background color of the contact section. */
+    padding: 20px; /* Adds space around the content inside the contact section. */
+    color: #fff; /* Sets the color of the text inside the contact section. */
+}
+
+/* This rule styles the form inside the contact section. */
+.contact-section form {
+    display: flex;
+    flex-direction: column; /* Makes the form fields stack vertically. */
+    gap: 10px; /* Adds space between the form fields. */
+}
+
+/* This rule styles the input fields and the textarea inside the form. */
+.contact-section input, .contact-section textarea {
+    padding: 10px; /* Adds space inside the input fields and the textarea. */
+    border: none; /* Removes the default border. */
+    border-radius: 5px; /* Rounds the corners. */
+}
+
+/* This rule styles the submit button inside the form. */
+.contact-section button {
+    padding: 10px; /* Adds space inside the button. */
+    border: none; /* Removes the default border. */
+    border-radius: 5px; /* Rounds the corners. */
+    background: #C71585; /* Sets the background color of the button. */
+    color: #fff; /* Sets the color of the text inside the button. */
+    cursor: pointer; /* Changes the cursor to a hand when hovering over the button. */
+}
+
+.contact-section button:hover {
+    background: #49002d; /* Changes the background color of the button when hovering over it. */
+    transition: all 0.3s ease; /* Adds a smooth transition effect. */
+}
