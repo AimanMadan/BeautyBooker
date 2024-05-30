@@ -1,4 +1,4 @@
-# BeautyBooker
+# WorkInProgress...
 
 "BeautyBooker is a comprehensive beauty service booking platform. It’s designed to provide users with a seamless and intuitive experience to explore and book various beauty services. The platform is built using HTML and CSS, and it features a responsive design that ensures optimal viewing across different devices.
 
